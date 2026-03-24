@@ -63,6 +63,7 @@ while True:
                         cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 0), 2)
             cv2.putText(flipped_frame, f"Brightness: {current_brightness}%", (10, 100),
                         cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+            cv2.createButton("reset brightness to max", lambda: sbc.set_brightness(100, display=0), None, cv2.QT_PUSH_BUTTON)
 
     cv2.imshow('Hand Tracking', flipped_frame)
 
