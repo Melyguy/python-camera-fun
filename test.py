@@ -1,5 +1,5 @@
 import cv2
-from mediapipe import mp
+import mediapipe as mp
 
 cap = cv2.VideoCapture(0)
 
@@ -13,8 +13,6 @@ if not cap.isOpened():
 while True:
     ret, frame = cap.read()
     if not ret: break
-
-    cv2.imshow('Webcam', frame)
 
     result = hands.process(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
 
