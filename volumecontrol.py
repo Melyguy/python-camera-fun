@@ -14,7 +14,7 @@ if not cap.isOpened():
     exit()
 
 min_dist = 20.0
-max_dist = 250.0
+max_dist = 120.0
 
 # Smoothing: keep track of previous brightness to avoid jitter
 current_brightness = sbc.get_brightness(display=0)[0]
